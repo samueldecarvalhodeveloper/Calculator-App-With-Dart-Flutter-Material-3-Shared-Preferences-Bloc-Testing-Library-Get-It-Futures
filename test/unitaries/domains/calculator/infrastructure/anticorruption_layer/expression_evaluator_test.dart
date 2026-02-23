@@ -3,7 +3,7 @@ import 'package:calculatorapp/domains/calculator/infrastructure/anticorruption_l
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group("Test Class \"ExpressionEvaluater\"", () {
+  group("Test Class \"ExpressionEvaluator\"", () {
     test(
         "Test If Method \"getEvaluatedExpression\" Returns Evaluated Expression",
         () {
