@@ -1,6 +1,6 @@
 import 'package:calculatorapp/domains/calculator/calculation_expression_register.dart';
 import 'package:calculatorapp/domains/calculator/calculator_characters.dart';
-import 'package:calculatorapp/domains/calculator/infrastructure/anticorruption_layer/expression_evaluater.dart';
+import 'package:calculatorapp/domains/calculator/infrastructure/anticorruption_layer/expression_evaluator.dart';
 import 'package:calculatorapp/domains/calculator/infrastructure/formatter/calculator_formatter.dart';
 
 class CalculationExpressionActiveRecord {
@@ -36,7 +36,7 @@ class CalculationExpressionActiveRecord {
     String currentCalculationExpression =
         _calculationExpressionRegister.getCalculationExpression();
     String evaluatedCalculationExpression =
-        ExpressionEvaluater.getEvaluatedExpression(
+        ExpressionEvaluator.getEvaluatedExpression(
             currentCalculationExpression);
 
     _calculationExpressionRegister

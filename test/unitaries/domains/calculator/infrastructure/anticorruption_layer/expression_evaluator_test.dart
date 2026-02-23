@@ -1,5 +1,5 @@
 import 'package:calculatorapp/constants/domains/calculator_constants.dart';
-import 'package:calculatorapp/domains/calculator/infrastructure/anticorruption_layer/expression_evaluater.dart';
+import 'package:calculatorapp/domains/calculator/infrastructure/anticorruption_layer/expression_evaluator.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -8,7 +8,7 @@ void main() {
         "Test If Method \"getEvaluatedExpression\" Returns Evaluated Expression",
         () {
       String evaluatedExpression =
-          ExpressionEvaluater.getEvaluatedExpression(SIMPLE_EXPRESSION);
+          ExpressionEvaluator.getEvaluatedExpression(SIMPLE_EXPRESSION);
 
       expect(evaluatedExpression, EVALUATED_SIMPLE_EXPRESSION);
     });
@@ -17,7 +17,7 @@ void main() {
         "Test If Method \"getEvaluatedExpression\" Returns Not Valid Expression Exception If Expression Is Not Valid",
         () {
       String evaluatedExpression =
-          ExpressionEvaluater.getEvaluatedExpression(NOT_VALID_EXPRESSION);
+          ExpressionEvaluator.getEvaluatedExpression(NOT_VALID_EXPRESSION);
       expect(evaluatedExpression, NOT_VALID_EXPRESSION_ERROR_MESSAGE);
     });
   });
